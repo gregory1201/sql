@@ -1,4 +1,4 @@
---procedura porównuj¹ca dane
+--procedura porÃ³wnujÂ¹ca dane
 CREATE OR REPLACE PROCEDURE COMPARE_FACT(
     ID_PACK_OLD NUMBER, 
     ID_PACK_NEW NUMBER
@@ -20,7 +20,7 @@ BEGIN
       AND f2.ID_FACT NOT IN (
         SELECT ID_FACT FROM FACT_HISTORY WHERE ID_PACK = ID_PACK_OLD);
 
-    --usuniête rekordy
+    --usuniÃªte rekordy
     INSERT INTO TMP_FACT_HISTORY_COMPARE_STATUS (ID_FACT, STATUS)
     SELECT f1.ID_FACT, 3
     FROM FACT_HISTORY f1
