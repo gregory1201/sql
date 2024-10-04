@@ -14,7 +14,7 @@ BEGIN
     VALUES (CUSTOMERS_SEQ.NEXTVAL, customer_name, customer_surname, customer_address)
     RETURNING customer_id INTO customer_id;
 
-    -- wstawienie zamówieñ do tabeli ORDERS
+    -- wstawienie zamÃ³wieÃ± do tabeli ORDERS
     FOR i IN 1..json_ext.get_count(json_data, '$.zamowienia') LOOP
         INSERT INTO ORDERS (product, cnt, price, customer_id)
         VALUES (
