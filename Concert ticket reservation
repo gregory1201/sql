@@ -6,7 +6,7 @@ CREATE OR REPLACE PROCEDURE RESERVE_TICKET(
 ) IS
     total_reservations NUMBER;
 BEGIN
-    -- sprawdzenie czy bilet zosta³ ju¿ zarezerwowany
+    -- sprawdzenie czy bilet zostaÂ³ juÂ¿ zarezerwowany
     SELECT COUNT(*) INTO total_reservations 
     FROM TICKETS 
     WHERE PESEL = PESEL;
